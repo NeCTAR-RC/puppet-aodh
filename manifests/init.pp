@@ -323,7 +323,7 @@ class aodh (
   $rabbit_userid                      = $::os_service_default,
   $rabbit_virtual_host                = $::os_service_default,
   $ensure_package                     = undef,
-  $rpc_backend                        = undef,
+  $rpc_backend                        = 'rabbit',
 ) inherits aodh::params {
 
   include ::aodh::deps
@@ -361,6 +361,7 @@ the future release. Please use aodh::package_ensure instead.")
     purge  => $purge_config,
   }
 
+  if $rpc_backend == 'rabbit' {
   oslo::messaging::rabbit { 'aodh_config':
     rabbit_userid               => $rabbit_userid,
     rabbit_password             => $rabbit_password,
@@ -380,7 +381,7 @@ the future release. Please use aodh::package_ensure instead.")
     kombu_compression           => $kombu_compression,
     amqp_durable_queues         => $amqp_durable_queues,
   }
-
+  } elsif $rpc_backend == 'amqp' {
   oslo::messaging::amqp { 'aodh_config':
     server_request_prefix  => $amqp_server_request_prefix,
     broadcast_prefix       => $amqp_broadcast_prefix,
@@ -398,6 +399,7 @@ the future release. Please use aodh::package_ensure instead.")
     sasl_config_name       => $amqp_sasl_config_name,
     username               => $amqp_username,
     password               => $amqp_password,
+  }
   }
 
   oslo::messaging::default { 'aodh_config':
