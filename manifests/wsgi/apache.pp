@@ -90,6 +90,14 @@
 #    { python-path => '/my/python/virtualenv' }
 #    Defaults to {}
 #
+#   [*wsgi_script_dir*]
+#     (optional) The directory path of the WSGI script.
+#     Optional. Defaults to $::aodh::params::aodh_wsgi_script_path
+#
+#   [*wsgi_script_source*]
+#     (optional) The file path of the WSGI script.
+#     Optional. Defaults to $::aodh::params::aodh_wsgi_script_source
+#
 #
 # == Dependencies
 #
@@ -122,6 +130,8 @@ class aodh::wsgi::apache (
   $access_log_format           = false,
   $error_log_file              = undef,
   $custom_wsgi_process_options = {},
+  $wsgi_script_dir             = $::aodh::params::aodh_wsgi_script_path,
+  $wsgi_script_source          = $::aodh::params::aodh_wsgi_script_source,
 ) {
 
   include ::aodh::deps
@@ -157,9 +167,9 @@ class aodh::wsgi::apache (
     wsgi_daemon_process         => 'aodh',
     wsgi_process_display_name   => $wsgi_process_display_name,
     wsgi_process_group          => 'aodh',
-    wsgi_script_dir             => $::aodh::params::aodh_wsgi_script_path,
+    wsgi_script_dir             => $wsgi_script_dir,
     wsgi_script_file            => 'app',
-    wsgi_script_source          => $::aodh::params::aodh_wsgi_script_source,
+    wsgi_script_source          => $wsgi_script_source,
     custom_wsgi_process_options => $custom_wsgi_process_options,
     access_log_file             => $access_log_file,
     access_log_format           => $access_log_format,
