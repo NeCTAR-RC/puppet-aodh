@@ -90,6 +90,14 @@
 #    { python-path => '/my/python/virtualenv' }
 #    Defaults to {}
 #
+#   [*wsgi_script_dir*]
+#     (optional) The directory path of the WSGI script.
+#     Optional. Defaults to $::aodh::params::aodh_wsgi_script_path
+#
+#   [*wsgi_script_source*]
+#     (optional) The file path of the WSGI script.
+#     Optional. Defaults to $::aodh::params::aodh_wsgi_script_source
+#
 #
 # == Dependencies
 #
