@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "d12365b4_0a09b345",
+        "filename": "spec/classes/aodh_wsgi_apache_spec.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-03-23T04:36:30Z",
+      "side": 1,
+      "message": "could choose some smaller text here. Just something like \"/my/path/app.wsgi\" would do",
+      "range": {
+        "startLine": 69,
+        "startChar": 40,
+        "endLine": 69,
+        "endChar": 104
+      },
+      "revId": "c01cbeced7e028c5dfc976b0ef21a6c969e5df17",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d44f87b5_6a6ebe65",
+        "filename": "spec/classes/aodh_wsgi_apache_spec.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-03-23T04:36:30Z",
+      "side": 1,
+      "message": "remove this, not part of your change",
+      "range": {
+        "startLine": 75,
+        "startChar": 64,
+        "endLine": 75,
+        "endChar": 65
+      },
+      "revId": "c01cbeced7e028c5dfc976b0ef21a6c969e5df17",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "199a4582_4bd298cd",
         "filename": "spec/classes/aodh_wsgi_apache_spec.rb",
         "patchSetId": 1
