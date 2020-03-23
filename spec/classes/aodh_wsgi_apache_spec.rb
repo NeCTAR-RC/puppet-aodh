@@ -28,6 +28,22 @@ describe 'aodh::wsgi::apache' do
       )}
     end
 
+    context 'when overriding aodh_wsgi_script params' do
+      let :params do
+        {
+          :wsgi_script_dir    => '/var/lib/openstack/cgi-bin/aodh',
+          :wsgi_script_source => '/var/lib/openstack/lib/python3.6/site-packages/aodh/api/app.wsgi',
+        }
+      end
+      it { is_expected.to contain_class('aodh::params') }
+      it { is_expected.to contain_class('apache') }
+      it { is_expected.to contain_class('apache::mod::wsgi') }
+      it { is_expected.to contain_openstacklib__wsgi__apache('aodh_wsgi').with(
+        :wsgi_script_dir    => '/var/lib/openstack/cgi-bin/aodh',
+        :wsgi_script_source => '/var/lib/openstack/lib/python3.6/site-packages/aodh/api/app.wsgi',
+      )}
+    end
+
     context 'when overriding parameters using different ports' do
       let :params do
         {
