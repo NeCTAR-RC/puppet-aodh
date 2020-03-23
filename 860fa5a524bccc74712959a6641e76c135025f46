@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d6d6450a_cee6de8f",
+        "filename": "spec/classes/aodh_wsgi_apache_spec.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000104
+      },
+      "writtenOn": "2020-03-23T23:58:59Z",
+      "side": 1,
+      "message": "this is wrong",
+      "range": {
+        "startLine": 67,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 72
+      },
+      "revId": "860fa5a524bccc74712959a6641e76c135025f46",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "27ef4926_dacc439e",
+        "filename": "spec/classes/aodh_wsgi_apache_spec.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1000104
+      },
+      "writtenOn": "2020-03-23T23:58:59Z",
+      "side": 1,
+      "message": "you need to add those vars here",
+      "revId": "860fa5a524bccc74712959a6641e76c135025f46",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    }
+  ]
+}
